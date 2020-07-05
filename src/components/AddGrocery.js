@@ -3,7 +3,7 @@ import { GroceryContext } from '../context/GroceryContext';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useHistory } from 'react-router-dom';
-//import { Redirect } from 'react-router-dom'
+
 
 export default function AddGrocery() {
     const { addGrocery, groceries } = useContext(GroceryContext);
@@ -17,7 +17,6 @@ export default function AddGrocery() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(name, category, qty, expiration, image);
-        //addGrocery(name, category, qty, expiration, image)
         addGrocery(image, name, qty, expiration, category)
         setName('');
         setCategory('');
@@ -25,10 +24,10 @@ export default function AddGrocery() {
         setExpiration('');
         setImage('');
         console.log(groceries)
-        //window.location('/')
+
 
         history.push('/')
-        //props.history.push('/')
+
     }
     return (
         <div>
@@ -64,16 +63,16 @@ export default function AddGrocery() {
                 </div>
 
 
-                {/* <div className="form-group">
+                <div className="form-group">
                     <div className="form-control">
                         <label htmlFor="ExpirationDate">Expiration</label>
                         <DatePicker selected={expiration}
                             onChange={(date) => { setExpiration(date) }}
-                        required
+                            required
                         />
 
                     </div>
-                </div> */}
+                </div>
                 {/* <div className="form-group">
                     <label htmlFor="ChemicalName" >Category</label>
                     <select class="custom-select mr-sm-2" id="">

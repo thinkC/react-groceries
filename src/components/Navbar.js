@@ -19,16 +19,9 @@ const Navbar = () => {
                 <div className="col-md-4 col-lg-4">
                     <h1 className="mt-3">Groceries Inventory | Tracker</h1>
                     <h5><i>Total number of grocery items - {groceries.length}</i></h5>
-
-                    {/* <button className="btn btn-lg btn-success mt-5"><a href="/">Home</a></button> */}
                     <button className="btn btn-lg btn-success mt-5">
                         {location.pathname === '/' ? <a href="/add">Add Grocery</a> : <a href="/">Home</a>}
-
-
                     </button>
-                    {/* <button className="btn btn-lg btn-success mt-5 mr-2"><a href="/add">Add Grocery</a></button> */}
-
-
 
                 </div>
             </div>
