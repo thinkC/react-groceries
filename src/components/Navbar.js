@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const { groceries } = useContext(GroceryContext);
-    // console.log(groceries)
+    console.log(groceries)
     let location = useLocation();
     console.log(location.pathname)
     return (
